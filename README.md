@@ -10,7 +10,7 @@ No installation required! Simply visit the link in the Usage section below.
 
 ## Usage
 
-Please visit (https://notes-notes-and-more-notes.herokuapp.com/) to view and use the application.
+Please click [here](https://notesfordayz.herokuapp.com/) to view and use the application.
 
 You can add a note by clicking the + button. Your saved notes will appear on the left side of the page.
 
