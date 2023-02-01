@@ -6,7 +6,7 @@ const generateId = require('generate-unqiue-id');
 router.get("/", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
-            res.status(500).send("Ooooops! Something went wrong...");
+            res.status(500).send("Something is wrong ...");
             throw err;
         } else {
             const notesData = JSON.parse(data);
@@ -33,7 +33,7 @@ router.post("/", (req, res) => {
                 res.status(500).send("Something is wrong...");
                 throw err;
             } else {
-                res.send("data added!");
+                res.send("Data added!");
             }
         });
       }
