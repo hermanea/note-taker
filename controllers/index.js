@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require("fs");
-const generateUniqueID = require('generate-unqiue-ID');
+const generateId = require('generate-unqiue-id');
 
 router.get("/", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
             const newNote = {
                 title: req.body.title,
                 text: req.body.text,
-                id: generateUniqueID()          
+                id: generateId()          
         }
         notesData.push(newData);
         fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
@@ -40,4 +40,4 @@ router.post("/", (req, res) => {
     });
   });
 
-  module.exports = router;
+module.exports = router;
