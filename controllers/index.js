@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require("fs");
-const generateId = require('generate-unqiue-id');
+const { v4: uuidv4 } = require('uuid');
 
 router.get("/", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
             const newNote = {
                 title: req.body.title,
                 text: req.body.text,
-                id: generateId()          
+                id: uuidv4()         
         }
         notesData.push(newData);
         fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
