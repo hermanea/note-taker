@@ -1,43 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const fs = require("fs");
-const { v4: uuidv4 } = require('uuid');
+const path = require("path");
 
-router.get("/", (req, res) => {
-    fs.readFile("./db/db.json", "utf-8", (err, data) => {
-        if (err) {
-            res.status(500).send("Something is wrong ...");
-            throw err;
-        } else {
-            const notesData = JSON.parse(data);
-            res.json(notesData);
-        }
-    });
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './index.html'));
+  });
+
+router.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/notes.html"))
 });
 
-router.post("/", (req, res) => {
-    fs.readFile("./db/db.json", "utf-8", (err, data) => {
-      if (err) {
-            res.status(500).send("Something is wrong...");
-            throw err;
-      } else {
-            const notesData = JSON.parse(data);
-            const newNote = {
-                title: req.body.title,
-                text: req.body.text,
-                id: uuidv4()         
-        }
-        notesData.push(newData);
-        fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
-            if (err) {
-                res.status(500).send("Something is wrong...");
-                throw err;
-            } else {
-                res.send("Data added!");
-            }
-        });
-      }
-    });
-  });
+const notesRoute = require('../controllers/notesController');
+router.use('/api/notes', notesRoute)
 
 module.exports = router;
