@@ -28,6 +28,4 @@ This project is covered under the MIT license.
 
 ## Questions
 
-You may reach the developer at: [Gmail Link](mailto:evanaherman@gmail.com)
-
-You may also visit the developer's Github profile here: [hermanea](https://github.com/hermanea)
+You may [email](mailto:evanaherman@gmail.com) the developer or visit their Github profile [here](https://github.com/hermanea).
