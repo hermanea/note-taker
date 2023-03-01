@@ -16,7 +16,7 @@ You can add a note by clicking the + button. Your saved notes will appear on the
 
 Below is a screenshot of the applitcation.
 
-[screenshot of app](./public/assets/images/screencapture-notezfordayz-herokuapp-2023-03-01-10_06_00.png)
+![screenshot of app](./public/assets/images/screencapture-notezfordayz-herokuapp-2023-03-01-10_06_00.png)
 
 ## Credit
 
