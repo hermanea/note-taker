@@ -14,6 +14,10 @@ Please click [here](https://notesfordayz.herokuapp.com/) to view and use the app
 
 You can add a note by clicking the + button. Your saved notes will appear on the left side of the page.
 
+Below is a screenshot of the applitcation.
+
+
+
 ## Credit
 
 N/A
