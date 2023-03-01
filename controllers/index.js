@@ -7,10 +7,10 @@ router.get('/', (req, res) => {
   });
 
 router.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/notes.html"))
+    res.sendFile(path.join(__dirname, "./public/notes.html"))
 });
 
-const notesRoute = require('../controllers/notesController');
+const notesRoute = require('./notesController');
 router.use('/api/notes', notesRoute)
 
 module.exports = router;
